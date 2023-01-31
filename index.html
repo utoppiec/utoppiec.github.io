@@ -13,10 +13,18 @@
         }
     </style>
     <script>
+        let random = 0;
+        var audio = new Audio('Y.mp3')
         function petla(){
             let top = Math.floor(Math.random()*(window.screen.height-window.innerHeight));
             let left = Math.floor(Math.random()*(window.screen.width-window.innerWidth));
             window.moveTo(left,top);
+            if(random==0){
+                audio.play();
+                random = Math.floor(Math.random()*50)+10;
+            }else{
+                random-=1;
+            }
         }
     </script>
 </head>
